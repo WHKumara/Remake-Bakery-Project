@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane" prefHeight="950.0" prefWidth="1900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoggingFormController">
+    <children>
+      <Pane layoutX="-7.0" layoutY="-4.0" prefHeight="950.0" prefWidth="1905.0" style="-fx-background-color: #081951;">
+         <children>
+            <Pane layoutX="1103.0" layoutY="87.0" prefHeight="775.0" prefWidth="648.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 45;">
+               <children>
+                    <Label layoutX="74.0" layoutY="94.0" prefHeight="63.0" prefWidth="173.0" text="Login">
+                        <font>
+                            <Font name="Bodoni MT Bold" size="71.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="96.0" layoutY="238.0" text="User Name">
+                        <font>
+                            <Font name="System Bold" size="29.0" />
+                        </font>
+                    </Label>
+                    <Label layoutX="96.0" layoutY="396.0" text="Password">
+                        <font>
+                            <Font name="System Bold" size="29.0" />
+                        </font>
+                    </Label>
+                    <JFXTextField fx:id="txtUserName" focusColor="BLACK" layoutX="147.0" layoutY="289.0" onAction="#txtUserNameAction" prefHeight="54.0" prefWidth="399.0" promptText="Type your user name">
+                        <font>
+                            <Font size="25.0" />
+                        </font>
+                  </JFXTextField>
+                    <JFXPasswordField fx:id="txtPassword" layoutX="147.0" layoutY="455.0" onAction="#txtPasswordOnAction" prefHeight="54.0" prefWidth="399.0" promptText="Type your password">
+                        <font>
+                            <Font size="25.0" />
+                        </font>
+                  </JFXPasswordField>
+                    <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="198.0" layoutY="596.0" onAction="#btnLoginAction" prefHeight="63.0" prefWidth="278.0" style="-fx-background-color: #A474E8;" styleClass="circle3" stylesheets="@../view/styles/style.css" text=" LOGIN " textFill="WHITE">
+                        <font>
+                            <Font name="System Bold" size="27.0" />
+                        </font>
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </JFXButton>
+                    <Label fx:id="lblPassWarning" layoutX="198.0" layoutY="543.0" prefHeight="28.0" prefWidth="326.0" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Label>
+                  <Separator layoutX="43.0" layoutY="169.0" prefHeight="23.0" prefWidth="405.0" />
+               </children>
+            </Pane>
+            <Text fill="WHITE" layoutX="214.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" wrappingWidth="775.4674530029297">
+               <font>
+                  <Font name="Calisto MT Bold" size="150.0" />
+               </font>
+            </Text>
+            <Text fill="#bb2dcc" layoutX="146.0" layoutY="548.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Galle Bakery" wrappingWidth="907.4674530029297">
+               <font>
+                  <Font name="Californian FB" size="150.0" />
+               </font>
+            </Text>
+            <Text fill="#bb2dcc" layoutX="328.0" layoutY="717.0" strokeType="OUTSIDE" strokeWidth="0.0" text="House" wrappingWidth="481.4674530029297">
+               <font>
+                  <Font name="Californian FB" size="150.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

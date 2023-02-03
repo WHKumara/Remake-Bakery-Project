@@ -130,7 +130,7 @@ public class OrderFormController {
             //check item and customer are selected kiyl
             if(!lblCustID.getText().equals("") && !lblItemId.getText().equals("")){
                 if (isEnough && isEnough2){
-                    String code = String.valueOf(cmbItem.getValue());
+                    String code = lblItemId.getText();
                     int qty = Integer.parseInt(txtQty.getText());
                     String desc = lblDesc.getText();
                     double unitPrice = Double.parseDouble(lblUnitPrice.getText());

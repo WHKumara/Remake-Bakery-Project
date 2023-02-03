@@ -14,7 +14,7 @@ public class PaymentDTO implements Serializable {
     public PaymentDTO() {
     }
 
-    public PaymentDTO(String paymentID, double paymentAmount, java.sql.Date date, java.sql.Time time, String supID) {
+    public PaymentDTO(String paymentID, double paymentAmount,Date date, Time time, String supID) {
         this.PaymentID = paymentID;
         this.PaymentAmount = paymentAmount;
         this.Date = date;
@@ -42,7 +42,7 @@ public class PaymentDTO implements Serializable {
         return Date;
     }
 
-    public void setDate(java.sql.Date date) {
+    public void setDate(Date date) {
         Date = date;
     }
 
@@ -50,7 +50,7 @@ public class PaymentDTO implements Serializable {
         return Time;
     }
 
-    public void setTime(java.sql.Time time) {
+    public void setTime(Time time) {
         Time = time;
     }
 

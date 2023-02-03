@@ -53,9 +53,9 @@ public class PaymentDAOImpl implements PaymentDAO {
         if (rst.next()) {
             String id = rst.getString("PaymentID");
             int newItemId = Integer.parseInt(id.replace("P-", "")) + 1;
-            return String.format("P-%03d", newItemId);
+            return String.format("P-%02d", newItemId);
         } else {
-            return "P-001";
+            return "P-01";
         }
     }
 

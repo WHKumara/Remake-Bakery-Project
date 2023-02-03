@@ -276,7 +276,7 @@ public class PaymentsFormController {
 
         data.addAll(list);
 
-        FilteredList<Payment> filteredList = new FilteredList(data, b -> true);
+        FilteredList<PaymentDTO> filteredList = new FilteredList(data, b -> true);
 
         txtSearch.textProperty().addListener((observable, oldValue, newValue) -> {
             filteredList.setPredicate(payment -> {

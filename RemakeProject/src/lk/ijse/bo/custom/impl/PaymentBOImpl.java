@@ -24,12 +24,12 @@ public class PaymentBOImpl implements PaymentBO {
 
     @Override
     public boolean savePayment(PaymentDTO dto) throws SQLException, ClassNotFoundException {
-        return paymentDAO.save(new Payment(dto.getPaymentID(),dto.getPaymentAmount(),null,null,dto.getSupID()));
+        return paymentDAO.save(new Payment(dto.getPaymentID(),dto.getPaymentAmount(),dto.getDate(),dto.getTime(),dto.getSupID()));
     }
 
     @Override
     public boolean updateData(PaymentDTO dto) throws SQLException, ClassNotFoundException {
-        return false;
+        return paymentDAO.updateData(new Payment(dto.getPaymentID(),dto.getPaymentAmount(),dto.getDate(),dto.getTime(),dto.getSupID()));
     }
 
     @Override

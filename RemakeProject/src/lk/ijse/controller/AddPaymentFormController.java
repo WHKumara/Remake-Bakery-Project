@@ -83,12 +83,12 @@ public class AddPaymentFormController {
                 TextInputDialog tiDialog = new TextInputDialog();
                 tiDialog.setTitle("password conformation");
                 tiDialog.setHeaderText("Please enter your Password :");
-                tiDialog.setContentText("Pssword: ");
+                tiDialog.setContentText("Password: ");
 
                 Optional<String> result = tiDialog.showAndWait();
 
                 if(result.get().equals("admin")){
-                   // Payment payment = new Payment(lblPaymentId.getText(),amount,null,null,supId);
+                   //Payment payment = new Payment(lblPaymentId.getText(),amount,null,null,supId);
                     //PaymentModal.addPayment(payment);
                     paymentBO.savePayment(new PaymentDTO(lblPaymentId.getText(), amount, null, null, supId));
                     new Alert(Alert.AlertType.INFORMATION,"Payment is added !").show();
