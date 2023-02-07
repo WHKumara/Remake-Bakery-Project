@@ -107,9 +107,6 @@ public class OrderFormController {
     @FXML
     private Label lblQtyWaning;
     private ObservableList<OrderTm> obList = FXCollections.observableArrayList();
-
-    CustomerBO customerBO = (CustomerBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.CUSTOMER);
-    ItemBO itemBO = (ItemBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.ITEM);
     PurchaseOrderBO purchaseOrderBO = (PurchaseOrderBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.PO);
     @FXML
     private Label lblAmountWarning;
@@ -124,6 +121,7 @@ public class OrderFormController {
     @FXML
     void btnAddAction(ActionEvent event) {
         if(isMatchQty()){
+
             boolean isEnough2 = Double.parseDouble(txtQty.getText()) <= Double.parseDouble(lblQtyHand.getText());
             boolean isEnough = Double.parseDouble(lblQtyHand.getText()) >0;
 
@@ -260,7 +258,7 @@ public class OrderFormController {
         String code = String.valueOf(cmbCustomer.getValue());
         try {
             //Customer cust = CustomerModal.search(code);
-            CustomerDTO cust = customerBO.searchCustomer(code);
+            CustomerDTO cust = purchaseOrderBO.searchCustomer(code);
             fillCustomerFields(cust);
         } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
@@ -273,7 +271,7 @@ public class OrderFormController {
         String code = String.valueOf(cmbItem.getValue());
         try {
             //Item item = ItemModal.search(code);
-            ItemDTO item = itemBO.searchItem(code);
+            ItemDTO item = purchaseOrderBO.searchItem(code);
             fillItemFields(item);
             txtQty.requestFocus();
         } catch (SQLException | ClassNotFoundException e) {
@@ -330,7 +328,7 @@ public class OrderFormController {
         try {
             ObservableList<String> observableList = FXCollections.observableArrayList();
             //ArrayList<String> idList = CustomerModal.loadCustId();
-            ArrayList<String> idList = customerBO.loadCustomerId();
+            ArrayList<String> idList = purchaseOrderBO.loadCustomerId();
 
             for (String id : idList) {
                 observableList.add(id);
@@ -346,7 +344,7 @@ public class OrderFormController {
         try {
             ObservableList<String> observableList = FXCollections.observableArrayList();
             //ArrayList<String> idList = ItemModal.loadItemId();
-            ArrayList<String> idList = itemBO.loadItemId();
+            ArrayList<String> idList = purchaseOrderBO.loadItemId();
 
             for (String id : idList) {
                 observableList.add(id);
@@ -416,7 +414,7 @@ public class OrderFormController {
             boolean isOrderAdded = purchaseOrderBO.save(orderDTO);
             if (isOrderAdded) {
                // boolean isUpdated = ItemModal.updateQty(order.getOrderDetails());
-                boolean isUpdated = itemBO.updateItemQty(orderDTO.getOrderDetailDTO());
+                boolean isUpdated = purchaseOrderBO.updateItemQty(orderDTO.getOrderDetailDTO());
                 if (isUpdated) {
                     //boolean isOrderDetailAdded = OrderDetailModal.saveOrderDetails(order.getOrderDetails());
                     boolean isOrderDetailAdded = purchaseOrderBO.saveOrderDetails(orderDTO.getOrderDetailDTO());
@@ -437,7 +435,7 @@ public class OrderFormController {
         String contact = txtContact.getText();
         try {
             //Customer cust = CustomerModal.search(code);
-            CustomerDTO cust = customerBO.searchCustomer(contact);
+            CustomerDTO cust = purchaseOrderBO.searchCustomer(contact);
             fillCustomerFields(cust);
         } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
@@ -448,7 +446,7 @@ public class OrderFormController {
         String name = String.valueOf(cmbDescription.getValue());
         try {
             //Item item = ItemModal.search(code);
-            ItemDTO item = itemBO.searchItem(name);
+            ItemDTO item = purchaseOrderBO.searchItem(name);
             fillItemFields(item);
             txtQty.requestFocus();
         } catch (SQLException | ClassNotFoundException e) {
@@ -459,7 +457,7 @@ public class OrderFormController {
         try {
             ObservableList<String> observableList = FXCollections.observableArrayList();
             //ArrayList<String> idList = ItemModal.loadItemId();
-            ArrayList<String> idList = itemBO.loadItemName();
+            ArrayList<String> idList = purchaseOrderBO.loadItemName();
 
             for (String id : idList) {
                 observableList.add(id);

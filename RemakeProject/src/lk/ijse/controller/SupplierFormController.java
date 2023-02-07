@@ -139,7 +139,7 @@ public class SupplierFormController {
         lblContact.setText(String.valueOf(newValue.getSupContact()));
         txtAddress.setText(newValue.getSupAddress());
         txtName.setText(newValue.getSupName());
-        txtContact.setText(String.valueOf(newValue.getSupContact()));
+        txtContact.setText(String.valueOf("0"+newValue.getSupContact()));
     }
     @FXML
     void btnUpdateAction(ActionEvent event) throws SQLException, ClassNotFoundException {
