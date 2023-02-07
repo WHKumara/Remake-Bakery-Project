@@ -80,19 +80,19 @@
                   <Font name="System Bold" size="21.0" />
                </font>
             </Label>
-            <Label layoutX="65.0" layoutY="240.0" text="Home" textFill="WHITE">
+            <Label layoutX="61.0" layoutY="223.0" text="Home" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="15.0" />
+                  <Font name="System Bold" size="20.0" />
                </font></Label>
-            <Label layoutX="56.0" layoutY="862.0" text="Employee" textFill="WHITE">
+            <Label layoutX="40.0" layoutY="862.0" text="Employee" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="15.0" />
+                  <Font name="System Bold" size="20.0" />
                </font></Label>
-            <Label layoutX="67.0" layoutY="419.0" text="Store" textFill="WHITE">
+            <Label layoutX="59.0" layoutY="408.0" text="Store" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="15.0" />
+                  <Font name="System Bold" size="20.0" />
                </font></Label>
-            <ImageView fitHeight="47.0" fitWidth="47.0" layoutX="64.0" layoutY="185.0" onMouseClicked="#clickHome" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="47.0" fitWidth="47.0" layoutX="65.0" layoutY="175.0" onMouseClicked="#clickHome" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../view/assests/home.png" />
                </image>
@@ -103,7 +103,7 @@
                   <DropShadow color="WHITE" />
                </effect>
             </ImageView>
-            <ImageView fitHeight="47.0" fitWidth="47.0" layoutX="61.0" layoutY="808.0" onMouseClicked="#clickEmployee" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="47.0" fitWidth="47.0" layoutX="63.0" layoutY="818.0" onMouseClicked="#clickEmployee" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../view/assests/employee.png" />
                </image>
@@ -114,7 +114,7 @@
                   <DropShadow color="WHITE" spread="0.38" />
                </effect>
             </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="42.0" layoutX="65.0" layoutY="377.0" onMouseClicked="#clickStore" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="42.0" fitWidth="42.0" layoutX="65.0" layoutY="366.0" onMouseClicked="#clickStore" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../view/assests/store.png" />
                </image>
@@ -125,7 +125,7 @@
                   <DropShadow color="WHITE" spread="0.43" />
                </effect>
             </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="43.0" layoutX="67.0" layoutY="461.0" onMouseClicked="#clickRawMaterial" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="42.0" fitWidth="43.0" layoutX="66.0" layoutY="449.0" onMouseClicked="#clickRawMaterial" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../view/assests/rawMaterial.png" />
                </image>
@@ -136,9 +136,9 @@
                   <DropShadow color="WHITE" spread="0.48" />
                </effect>
             </ImageView>
-            <Label layoutX="44.0" layoutY="508.0" text="Raw Mterials" textFill="WHITE">
+            <Label layoutX="29.0" layoutY="498.0" text="Raw Mterials" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="15.0" />
+                  <Font name="System Bold" size="20.0" />
                </font></Label>
             <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="66.0" layoutY="553.0" onMouseClicked="#clickPayments" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -151,9 +151,9 @@
                   <DropShadow color="WHITE" spread="0.61" />
                </effect>
             </ImageView>
-            <Label layoutX="51.0" layoutY="591.0" text="Payments" textFill="WHITE">
+            <Label layoutX="40.0" layoutY="587.0" text="Payments" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="15.0" />
+                  <Font name="System Bold" size="20.0" />
                </font></Label>
             <ImageView fitHeight="47.0" fitWidth="42.0" layoutX="64.0" layoutY="638.0" onMouseClicked="#clickSuppliers" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -166,9 +166,9 @@
                   <DropShadow color="WHITE" />
                </effect>
             </ImageView>
-            <Label layoutX="52.0" layoutY="680.0" text="Suppliers" textFill="WHITE">
+            <Label layoutX="44.0" layoutY="681.0" text="Suppliers" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="15.0" />
+                  <Font name="System Bold" size="20.0" />
                </font></Label>
             <ImageView fitHeight="42.0" fitWidth="54.0" layoutX="64.0" layoutY="732.0" onMouseClicked="#clickCustomers" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -181,11 +181,11 @@
                   <DropShadow color="WHITE" spread="0.21" />
                </effect>
             </ImageView>
-            <Label layoutX="50.0" layoutY="774.0" text="Customers" textFill="WHITE">
+            <Label layoutX="35.0" layoutY="768.0" text="Customers" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="15.0" />
+                  <Font name="System Bold" size="20.0" />
                </font></Label>
-            <ImageView fitHeight="42.0" fitWidth="42.0" layoutX="64.0" layoutY="284.0" onMouseClicked="#clickOrder" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="42.0" fitWidth="42.0" layoutX="62.0" layoutY="277.0" onMouseClicked="#clickOrder" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../view/assests/orders.png" />
                </image>
@@ -196,9 +196,9 @@
                   <DropShadow color="WHITE" spread="0.44" />
                </effect>
             </ImageView>
-            <Label layoutX="65.0" layoutY="333.0" text="Order" textFill="WHITE">
+            <Label layoutX="58.0" layoutY="317.0" text="Order" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="15.0" />
+                  <Font name="System Bold" size="20.0" />
                </font></Label>
          </children>
       </Pane>
