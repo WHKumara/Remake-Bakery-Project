@@ -18,12 +18,12 @@
 
 <AnchorPane fx:id="pane" prefHeight="796.0" prefWidth="1667.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.RawMaterialFormController">
    <children>
-      <TableView fx:id="tblRawMaterial" layoutX="169.0" layoutY="153.0" prefHeight="585.0" prefWidth="1090.0" styleClass="payload" stylesheets="@../view/styles/style.css">
+      <TableView fx:id="tblRawMaterial" layoutX="66.0" layoutY="156.0" prefHeight="541.0" prefWidth="1193.0" styleClass="payload" stylesheets="@../view/styles/style.css">
         <columns>
           <TableColumn fx:id="colMterialId" prefWidth="183.0" text="Material ID" />
-          <TableColumn fx:id="colType" prefWidth="310.0" text="Type" />
-            <TableColumn fx:id="colQty" prefWidth="280.0" text="Quantity" />
-            <TableColumn fx:id="colSupId" prefWidth="224.0" text="Supp ID" />
+          <TableColumn fx:id="colType" prefWidth="317.0" text="Type" />
+            <TableColumn fx:id="colQty" prefWidth="323.0" text="Quantity" />
+            <TableColumn fx:id="colSupId" prefWidth="274.0" text="Supp ID" />
         </columns>
       </TableView>
       <Pane layoutX="1345.0" layoutY="96.0" prefHeight="373.0" prefWidth="285.0">
@@ -166,7 +166,7 @@
             </Label>
          </children>
       </Pane>
-      <TextField fx:id="txtSearch" layoutX="1036.0" layoutY="96.0" onKeyTyped="#txtSearchAction" promptText="Search" style="-fx-background-radius: 20;">
+      <TextField fx:id="txtSearch" layoutX="1022.0" layoutY="90.0" onKeyTyped="#txtSearchAction" promptText="Search" style="-fx-background-radius: 20;">
          <font>
             <Font size="16.0" />
          </font>
@@ -177,7 +177,7 @@
             <DropShadow color="#cdb6b6" />
          </effect>
       </TextField>
-      <ImageView fitHeight="37.0" fitWidth="51.0" layoutX="982.0" layoutY="93.0" onMouseClicked="#imgSearchAction" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="37.0" fitWidth="51.0" layoutX="971.0" layoutY="90.0" onMouseClicked="#imgSearchAction" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../view/assests/search.png" />
          </image>

@@ -82,4 +82,14 @@ public class PurchaseOrderBOImpl implements PurchaseOrderBO {
         return itemDAO.loadItemName();
     }
 
+    @Override
+    public double getTotalAmount() throws SQLException, ClassNotFoundException {
+        return orderDAO.getTotalAmount();
+    }
+
+    @Override
+    public ArrayList<OrderDetailTm> getData() throws SQLException, ClassNotFoundException {
+        return orderDAO.getData();
+    }
+
 }

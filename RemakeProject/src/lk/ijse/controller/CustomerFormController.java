@@ -253,13 +253,13 @@ public class CustomerFormController {
         lblSelectedId.setText(newValue.getCustID());
         lblName.setText(newValue.getCustName());
         lblAddress.setText(newValue.getCustAddress());
-        lblContact.setText(String.valueOf(newValue.getCustContact()));
+        lblContact.setText("0"+newValue.getCustContact());
         txtName.setText(newValue.getCustName());
-        txtContact.setText(String.valueOf(newValue.getCustContact()));
+        txtContact.setText("0"+newValue.getCustContact());
         txtAddress.setText(newValue.getCustAddress());
     }
     public boolean isMatchContact() {
-        Pattern pattern = Pattern.compile("^(7)([0-9]{8})$");
+        Pattern pattern = Pattern.compile("^(07)([0-9]{8})$");
         Matcher matcher = pattern.matcher(txtContact.getText());
 
         boolean isMatchContact = matcher.matches();

@@ -19,7 +19,7 @@
 
 <AnchorPane fx:id="pane" prefHeight="796.0" prefWidth="1667.0" style="-fx-background-color: #F2F7FD;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.EmployeeFromController">
    <children>
-      <TableView fx:id="tblEmpDetail" layoutX="60.0" layoutY="179.0" prefHeight="531.0" prefWidth="1215.0" stylesheets="@../view/styles/style.css">
+      <TableView fx:id="tblEmpDetail" layoutX="66.0" layoutY="156.0" prefHeight="541.0" prefWidth="1193.0" stylesheets="@../view/styles/style.css">
         <columns>
           <TableColumn fx:id="colEmpId" prefWidth="146.33334350585938" text="EmpID" />
           <TableColumn fx:id="colEmpName" prefWidth="257.0" text="Name" />
@@ -202,7 +202,7 @@
             </Label>
          </children>
       </Pane>
-      <ImageView fitHeight="31.0" fitWidth="41.0" layoutX="969.0" layoutY="110.0" onMouseClicked="#imgSearchAction" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="31.0" fitWidth="41.0" layoutX="977.0" layoutY="95.0" onMouseClicked="#imgSearchAction" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../view/assests/search.png" />
          </image>
@@ -213,7 +213,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <TextField fx:id="txtSearch" layoutX="1016.0" layoutY="110.0" onKeyTyped="#txtSearchAction" promptText="Search" style="-fx-background-radius: 20;">
+      <TextField fx:id="txtSearch" layoutX="1022.0" layoutY="90.0" onKeyTyped="#txtSearchAction" promptText="Search" style="-fx-background-radius: 20;">
          <effect>
             <DropShadow color="#c6b3b3" />
          </effect>

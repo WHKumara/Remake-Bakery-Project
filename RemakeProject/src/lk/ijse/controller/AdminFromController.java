@@ -114,8 +114,8 @@ public class AdminFromController {
     }
 
     @FXML
-    void imgOrderAction(MouseEvent event) {
-
+    void imgOrderAction(MouseEvent event) throws IOException {
+        Navigation.navigate(Routes.ORDER_DETAIL,homePane);
     }
     public void showDate() {
         Date d = new Date();
