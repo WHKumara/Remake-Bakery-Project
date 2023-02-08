@@ -24,4 +24,5 @@ public interface PurchaseOrderBO extends SuperBO {
     ArrayList<String> loadItemName() throws SQLException, ClassNotFoundException;
     double getTotalAmount() throws SQLException, ClassNotFoundException;
     ArrayList<OrderDetailTm> getData() throws SQLException, ClassNotFoundException;
+    int getOrderCount() throws SQLException, ClassNotFoundException;
 }

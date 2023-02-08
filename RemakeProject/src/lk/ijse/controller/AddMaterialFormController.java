@@ -25,6 +25,7 @@ import java.util.regex.Pattern;
 
 public class AddMaterialFormController {
 
+    public Label lblSupplierId;
     @FXML
     private AnchorPane pane;
 
@@ -143,5 +144,9 @@ public class AddMaterialFormController {
             lblQtyWarning.setText("");
         }
         return isMatchQty;
+    }
+
+    public void onCmbAction(ActionEvent actionEvent) {
+        lblSupplierId.setText(cmbSupplier.getValue());
     }
 }

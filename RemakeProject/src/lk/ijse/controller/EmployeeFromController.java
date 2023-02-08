@@ -248,7 +248,7 @@ public class EmployeeFromController {
         lblContact.setText(String.valueOf(newValue.getEmpContact()));
         txtAddress.setText(newValue.getEmpAddress());
         txtName.setText(newValue.getEmpName());
-        txtContact.setText(String.valueOf(newValue.getEmpContact()));
+        txtContact.setText("0"+newValue.getEmpContact());
     }
     public boolean isMatchContact() {
         Pattern pattern = Pattern.compile("^(07)([0-9]{8,8})$");

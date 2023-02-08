@@ -12,10 +12,14 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
+import lk.ijse.bo.BOFactory;
+import lk.ijse.bo.custom.CustomerBO;
+import lk.ijse.bo.custom.PurchaseOrderBO;
 import lk.ijse.navigation.Navigation;
 import lk.ijse.navigation.Routes;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -44,10 +48,14 @@ public class AdminFromController {
 
     @FXML
     private Label lblCustomerCount;
+    CustomerBO customerBO = (CustomerBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.CUSTOMER);
+    PurchaseOrderBO purchaseOrderBO = (PurchaseOrderBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.PO);
 
-    public void initialize() {
+    public void initialize() throws SQLException, ClassNotFoundException {
         showDate();
         showTime();
+        lblCustomerCount.setText(String.valueOf(customerBO.customerCount()));
+        lblTotalOrders.setText(String.valueOf(purchaseOrderBO.getOrderCount()));
     }
 
     @FXML

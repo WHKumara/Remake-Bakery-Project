@@ -92,4 +92,9 @@ public class PurchaseOrderBOImpl implements PurchaseOrderBO {
         return orderDAO.getData();
     }
 
+    @Override
+    public int getOrderCount() throws SQLException, ClassNotFoundException {
+        return orderDAO.orderCount();
+    }
+
 }

@@ -121,7 +121,6 @@ public class RawMaterialFormController {
         data.addAll(materialList);
         tblRawMaterial.setItems(data);
 
-        System.out.println(data);
     }
     public void selectedItem(){
         tblRawMaterial.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {

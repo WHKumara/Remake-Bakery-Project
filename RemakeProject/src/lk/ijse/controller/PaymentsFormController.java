@@ -116,7 +116,6 @@ public class PaymentsFormController {
         data.addAll(paymentlList);
         tblPayments.setItems(data);
 
-        System.out.println(data);
     }
     private void loadSupplierIds() {
         try {

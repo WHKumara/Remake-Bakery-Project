@@ -50,7 +50,7 @@
             <Font size="20.0" />
          </font>
       </TextField>
-      <Label layoutX="962.0" layoutY="234.0" prefHeight="69.0" prefWidth="196.0" text="Supplier :">
+      <Label layoutX="962.0" layoutY="234.0" prefHeight="69.0" prefWidth="131.0" text="Supplier :">
          <font>
             <Font name="System Bold" size="27.0" />
          </font>
@@ -83,7 +83,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <ComboBox fx:id="cmbSupplier" layoutX="1015.0" layoutY="329.0" prefHeight="44.0" prefWidth="305.0" promptText="Select Supplier">
+      <ComboBox fx:id="cmbSupplier" layoutX="1015.0" layoutY="329.0" onAction="#onCmbAction" prefHeight="44.0" prefWidth="305.0" promptText="Select Supplier">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></ComboBox>
@@ -96,6 +96,11 @@
       <Label fx:id="lblQtyWarning" layoutX="185.0" layoutY="522.0" prefHeight="21.0" prefWidth="196.0" textFill="RED">
          <font>
             <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSupplierId" layoutX="1097.0" layoutY="234.0" prefHeight="69.0" prefWidth="196.0">
+         <font>
+            <Font name="System Bold" size="27.0" />
          </font>
       </Label>
    </children>
