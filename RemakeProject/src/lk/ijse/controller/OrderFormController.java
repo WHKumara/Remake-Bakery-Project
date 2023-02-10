@@ -210,7 +210,7 @@ public class OrderFormController {
             try {
                 if (txtAmountAction(event) && !txtAmount.getText().equals("")){
                    // boolean isPlaced = PlaceOrderModal.placeOrder(order);
-                    boolean isPlaced = placeOrder(order);
+                    boolean isPlaced = purchaseOrderBO.placeOrder(order);
                     if (isPlaced) {
                         /* to clear table */
                         obList.clear();
@@ -406,29 +406,6 @@ public class OrderFormController {
             lblAmountWarning.setText("");
         }
         return isMatchAmount;
-    }
-    private  boolean placeOrder(OrderDTO orderDTO) throws SQLException, ClassNotFoundException{
-        try {
-            DBConnection.getDBConnection().getConnection().setAutoCommit(false);
-           //boolean isOrderAdded = purchaseOrderBO.save(new Order(orderDTO.getID(),orderDTO.getCustID(),null,null,orderDTO.getAmount(),orderDTO.getOrderDetailDTO()));
-            boolean isOrderAdded = purchaseOrderBO.save(orderDTO);
-            if (isOrderAdded) {
-               // boolean isUpdated = ItemModal.updateQty(order.getOrderDetails());
-                boolean isUpdated = purchaseOrderBO.updateItemQty(orderDTO.getOrderDetailDTO());
-                if (isUpdated) {
-                    //boolean isOrderDetailAdded = OrderDetailModal.saveOrderDetails(order.getOrderDetails());
-                    boolean isOrderDetailAdded = purchaseOrderBO.saveOrderDetails(orderDTO.getOrderDetailDTO());
-                    if (isOrderDetailAdded) {
-                        DBConnection.getDBConnection().getConnection().commit();
-                        return true;
-                    }
-                }
-            }
-            DBConnection.getDBConnection().getConnection().rollback();
-            return false;
-        } finally {
-            DBConnection.getDBConnection().getConnection().setAutoCommit(true);
-        }
     }
 
     public void txtContactAction(ActionEvent actionEvent) {

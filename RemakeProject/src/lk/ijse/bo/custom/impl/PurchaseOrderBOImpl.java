@@ -6,6 +6,7 @@ import lk.ijse.dao.custom.CustomerDAO;
 import lk.ijse.dao.custom.ItemDAO;
 import lk.ijse.dao.custom.OrderDAO;
 import lk.ijse.dao.custom.OrderDetailDAO;
+import lk.ijse.db.DBConnection;
 import lk.ijse.dto.CustomerDTO;
 import lk.ijse.dto.ItemDTO;
 import lk.ijse.dto.OrderDTO;
@@ -95,6 +96,28 @@ public class PurchaseOrderBOImpl implements PurchaseOrderBO {
     @Override
     public int getOrderCount() throws SQLException, ClassNotFoundException {
         return orderDAO.orderCount();
+    }
+
+    @Override
+    public boolean placeOrder(OrderDTO orderDTO) throws SQLException, ClassNotFoundException {
+        try {
+            DBConnection.getDBConnection().getConnection().setAutoCommit(false);
+            boolean isOrderAdded = save(orderDTO);
+            if (isOrderAdded) {
+                boolean isUpdated = updateItemQty(orderDTO.getOrderDetailDTO());
+                if (isUpdated) {
+                    boolean isOrderDetailAdded = saveOrderDetails(orderDTO.getOrderDetailDTO());
+                    if (isOrderDetailAdded) {
+                        DBConnection.getDBConnection().getConnection().commit();
+                        return true;
+                    }
+                }
+            }
+            DBConnection.getDBConnection().getConnection().rollback();
+            return false;
+        } finally {
+            DBConnection.getDBConnection().getConnection().setAutoCommit(true);
+        }
     }
 
 }

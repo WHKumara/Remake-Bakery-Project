@@ -145,7 +145,7 @@ public class PaymentsFormController {
         lblAmount.setText(String.valueOf(newValue.getPaymentAmount()));
         lblDate.setText(String.valueOf(newValue.getDate()));
         lblSuppId.setText(newValue.getSupID());
-        txtAmount.setText(String.valueOf(newValue.getPaymentAmount()));
+        txtAmount.setText(String.valueOf(newValue.getPaymentAmount()+"0"));
         lblSupId.setText(newValue.getSupID());
     }
 
@@ -255,7 +255,7 @@ public class PaymentsFormController {
         }
     }
     public boolean isMatch() {
-        Pattern pattern = Pattern.compile("^\\d+$");
+        Pattern pattern = Pattern.compile("^[0-9]+\\.[0-9]{2}$");
         Matcher matcher = pattern.matcher(txtAmount.getText());
 
         boolean isMatchPrice = matcher.matches();

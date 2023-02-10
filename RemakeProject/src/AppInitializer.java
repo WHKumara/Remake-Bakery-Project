@@ -20,7 +20,7 @@ public class AppInitializer extends Application {
         Scene scene = new Scene(window);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Logging Form");
-        primaryStage.centerOnScreen();
+       primaryStage.centerOnScreen();
 
         primaryStage.show();
 
